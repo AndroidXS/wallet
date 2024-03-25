@@ -98,7 +98,6 @@ class RootActivity : AppCompatActivity(), RootScreen {
 
         setupDatePicker()
         setupTimePicker()
-
         AddTransactionWidget.updateBroadcast(this)
         AddTransactionWidgetCompact.updateBroadcast(this)
         WalletBalanceWidgetReceiver.updateBroadcast(this)

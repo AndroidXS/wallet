@@ -27,7 +27,7 @@ version-code = "150"
 detekt = "1.23.5" # https://detekt.dev/docs/gettingstarted/gradle/
 
 [libraries]
-android-gradle-plugin = { module = "com.android.tools.build:gradle", version = "8.3.0" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version = "8.2.2" }
 
 # Kotlin
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
