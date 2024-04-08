@@ -60,6 +60,7 @@ fun BoxWithConstraintsScope.IvyNavGraph(screen: Screen?) {
         }
 
         is MainScreen -> MainScreen(screen = screen)
+        //1 3
         is OnboardingScreen -> OnboardingScreen(screen = screen)
         is ExchangeRatesScreen -> ExchangeRatesScreen()
         is EditTransactionScreen -> EditTransactionScreen(screen = screen)
@@ -70,6 +71,7 @@ fun BoxWithConstraintsScope.IvyNavGraph(screen: Screen?) {
         is PlannedPaymentsScreen -> PlannedPaymentsScreen(screen = screen)
         is EditPlannedScreen -> EditPlannedScreen(screen = screen)
         is BalanceScreen -> BalanceScreen(screen = screen)
+        //2
         is ImportScreen -> ImportCSVScreen(screen = screen)
         is ReportScreen -> ReportScreen(screen = screen)
         is BudgetScreen -> BudgetScreen(screen = screen)

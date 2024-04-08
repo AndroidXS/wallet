@@ -42,7 +42,6 @@ class MigrationsManager @Inject constructor(
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
-
                 // Mark the migration as executed
                 context.dataStore.edit {
                     it[key] = true

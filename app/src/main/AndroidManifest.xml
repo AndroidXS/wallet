@@ -17,9 +17,12 @@
         android:requestLegacyExternalStorage="true" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!--当应用程序发送通知时，系统将允许应用程序以全屏界面的形式显示通知内容。-->
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
     <!--  Show activity over the lockscreen  -->
+    <!-- 禁用设备的键盘锁 -->
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 需要时阻止设备进入休眠状态。这使应用程序能够在后台保持活动状态 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application

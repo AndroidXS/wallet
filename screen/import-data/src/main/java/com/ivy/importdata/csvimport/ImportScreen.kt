@@ -75,6 +75,7 @@ private fun BoxWithConstraintsScope.UI(
     onFinish: () -> Unit = {},
 ) {
     when (importStep) {
+        //2.1
         ImportStep.IMPORT_FROM -> {
             ImportFrom(
                 hasSkip = screen.launchedFromOnboarding,
@@ -83,7 +84,7 @@ private fun BoxWithConstraintsScope.UI(
                 onImportFrom = onChooseImportType
             )
         }
-
+        //2.2
         ImportStep.INSTRUCTIONS -> {
             ImportInstructions(
                 hasSkip = screen.launchedFromOnboarding,
@@ -92,13 +93,13 @@ private fun BoxWithConstraintsScope.UI(
                 onUploadClick = onUploadCSVFile
             )
         }
-
+        //2.3
         ImportStep.LOADING -> {
             ImportProcessing(
                 progressPercent = importProgressPercent
             )
         }
-
+        //2.4
         ImportStep.RESULT -> {
             ImportResultUI(
                 result = importResult!!,

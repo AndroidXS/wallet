@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class AddTransactionWidgetCompact : AppWidgetProvider() {
-
+//桌面小部件，点击按钮后发送广播
     @Inject
     lateinit var widgetClick: AddTransactionWidgetClick
 

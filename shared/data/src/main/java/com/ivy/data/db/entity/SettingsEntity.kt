@@ -9,7 +9,6 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import java.util.*
 
-@Deprecated("Legacy concept - migrate to DataStore and get rid of it.")
 @Keep
 @Serializable
 @Entity(tableName = "settings")

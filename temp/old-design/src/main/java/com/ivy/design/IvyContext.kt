@@ -23,7 +23,6 @@ abstract class IvyContext {
             return if (field > 0) field else throw IllegalStateException("screenHeight not initialized")
         }
 
-    @Deprecated("Old design system. Use `:ivy-design` and Material3")
     fun switchTheme(theme: Theme) {
         this.theme = theme
     }

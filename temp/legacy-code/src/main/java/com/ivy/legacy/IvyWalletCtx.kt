@@ -20,42 +20,34 @@ import javax.inject.Singleton
 @Singleton
 class IvyWalletCtx @Inject constructor() : IvyContext() {
     // ------------------------------------------ State ---------------------------------------------
-    @Deprecated("Legacy code. Don't use it, please.")
     var startDayOfMonth = 1
         private set
 
-    @Deprecated("Legacy code. Don't use it, please.")
     fun setStartDayOfMonth(day: Int) {
         startDayOfMonth = day
     }
 
     // ---------------------- Optimization  ----------------------------
-    @Deprecated("Legacy code. Don't use it, please.")
     val categoryMap: MutableMap<UUID, Category> = mutableMapOf()
 
-    @Deprecated("Legacy code. Don't use it, please.")
     val accountMap: MutableMap<UUID, Account> = mutableMapOf()
     // ---------------------- Optimization  ----------------------------
 
-    @Deprecated("Legacy code. Don't use it, please.")
     var dataBackupCompleted = false
 
-    @Deprecated("Legacy code. Don't use it, please.")
+
     fun initStartDayOfMonthInMemory(sharedPrefs: SharedPrefs): Int {
         startDayOfMonth = sharedPrefs.getInt(SharedPrefs.START_DATE_OF_MONTH, 1)
         return startDayOfMonth
     }
 
-    @Deprecated("Legacy code. Don't use it, please.")
     var selectedPeriod: com.ivy.legacy.data.model.TimePeriod =
         com.ivy.legacy.data.model.TimePeriod.currentMonth(
             startDayOfMonth = startDayOfMonth // this is default value
         )
 
-    @Deprecated("Legacy code. Don't use it, please.")
     private var selectedPeriodInitialized = false
 
-    @Deprecated("Legacy code. Don't use it, please.")
     fun initSelectedPeriodInMemory(
         startDayOfMonth: Int,
         forceReinitialize: Boolean = false
@@ -70,28 +62,21 @@ class IvyWalletCtx @Inject constructor() : IvyContext() {
         return selectedPeriod
     }
 
-    @Deprecated("Legacy code. Don't use it, please.")
     fun updateSelectedPeriodInMemory(period: com.ivy.legacy.data.model.TimePeriod) {
         selectedPeriod = period
     }
 
-    @Deprecated("Legacy code. Don't use it, please.")
     var transactionsListState: LazyListState? = null
 
-    @Deprecated("Legacy code. Don't use it, please.")
     var categoriesListState: LazyListState? = null
 
-    @Deprecated("Legacy code. Don't use it, please.")
     var accountsListState: LazyListState? = null
 
-    @Deprecated("Legacy code. Don't use it, please.")
     var loansScrollState: ScrollState = ScrollState(0)
 
-    @Deprecated("Legacy code. Don't use it, please.")
     var mainTab by mutableStateOf(com.ivy.legacy.data.model.MainTab.HOME)
         private set
 
-    @Deprecated("Legacy code. Don't use it, please.")
     fun selectMainTab(tab: com.ivy.legacy.data.model.MainTab) {
         mainTab = tab
     }
@@ -133,17 +118,14 @@ class IvyWalletCtx @Inject constructor() : IvyContext() {
     // Activity help -------------------------------------------------------------------------------
 
     // Billing -------------------------------------------------------------------------------------
-    @Deprecated("Legacy code. Don't use it, please.")
+
     var isPremium = true // if (BuildConfig.DEBUG) Constants.PREMIUM_INITIAL_VALUE_DEBUG else false
     // Billing -------------------------------------------------------------------------------------
 
-    @Deprecated("Legacy code. Don't use it, please.")
     lateinit var googleSignIn: (idTokenResult: (String?) -> Unit) -> Unit
 
-    @Deprecated("Legacy code. Don't use it, please.")
     lateinit var createNewFile: (fileName: String, onCreated: (Uri) -> Unit) -> Unit
 
-    @Deprecated("Legacy code. Don't use it, please.")
     lateinit var openFile: (onOpened: (Uri) -> Unit) -> Unit
 
     // Testing --------------------------------------------------------------------------------------

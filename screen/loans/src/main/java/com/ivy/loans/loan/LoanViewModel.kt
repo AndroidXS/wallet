@@ -14,7 +14,7 @@ import com.ivy.data.model.LoanType
 import com.ivy.base.ComposeViewModel
 import com.ivy.domain.event.AccountUpdatedEvent
 import com.ivy.domain.event.EventBus
-import com.ivy.frp.test.TestIdlingResource
+import com.ivy.legacy.frp.test.TestIdlingResource
 import com.ivy.legacy.datamodel.Account
 import com.ivy.legacy.datamodel.Loan
 import com.ivy.legacy.domain.deprecated.logic.AccountCreator

@@ -16,7 +16,7 @@ import com.ivy.data.db.dao.read.TransactionDao
 import com.ivy.base.ComposeViewModel
 import com.ivy.domain.event.AccountUpdatedEvent
 import com.ivy.domain.event.EventBus
-import com.ivy.frp.test.TestIdlingResource
+import com.ivy.legacy.frp.test.TestIdlingResource
 import com.ivy.legacy.IvyWalletCtx
 import com.ivy.legacy.datamodel.Account
 import com.ivy.legacy.datamodel.Loan

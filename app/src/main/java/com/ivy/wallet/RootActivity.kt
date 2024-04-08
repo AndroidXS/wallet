@@ -92,8 +92,6 @@ class RootActivity : AppCompatActivity(), RootScreen {
         super.onCreate(savedInstanceState)
 
         setupActivityForResultLaunchers()
-
-        // Make the app drawing area fullscreen (draw behind status and nav bars)
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
         setupDatePicker()
@@ -109,7 +107,6 @@ class RootActivity : AppCompatActivity(), RootScreen {
             LaunchedEffect(isSystemInDarkTheme) {
                 viewModel.start(isSystemInDarkTheme, intent)
             }
-
             val appLocked by viewModel.appLocked.collectAsState()
             when (appLocked) {
                 null -> {

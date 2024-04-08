@@ -2,7 +2,7 @@ package com.ivy.frp.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ivy.frp.test.TestIdlingResource
+import com.ivy.legacy.frp.test.TestIdlingResource
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

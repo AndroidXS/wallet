@@ -8,7 +8,7 @@ import com.ivy.data.db.dao.read.SettingsDao
 import com.ivy.domain.event.AccountUpdatedEvent
 import com.ivy.domain.event.EventBus
 import com.ivy.domain.usecase.SyncExchangeRatesUseCase
-import com.ivy.frp.test.TestIdlingResource
+import com.ivy.legacy.frp.test.TestIdlingResource
 import com.ivy.legacy.IvyWalletCtx
 import com.ivy.legacy.data.model.MainTab
 import com.ivy.legacy.domain.deprecated.logic.AccountCreator

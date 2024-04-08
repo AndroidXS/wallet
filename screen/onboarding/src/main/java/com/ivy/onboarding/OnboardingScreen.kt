@@ -67,27 +67,28 @@ private fun BoxWithConstraintsScope.UI(
     onEvent: (OnboardingEvent) -> Unit = {}
 ) {
     when (onboardingState) {
+        //1.1
         OnboardingState.SPLASH, OnboardingState.LOGIN -> {
             OnboardingSplashLogin(
                 onboardingState = onboardingState,
                 onSkip = { onEvent(OnboardingEvent.LoginOfflineAccount) }
             )
         }
-
+        //1.2
         OnboardingState.CHOOSE_PATH -> {
             OnboardingType(
                 onStartImport = { onEvent(OnboardingEvent.StartImport) },
                 onStartFresh = { onEvent(OnboardingEvent.StartFresh) }
             )
         }
-
+        //2.3
         OnboardingState.CURRENCY -> {
             OnboardingSetCurrency(
                 preselectedCurrency = currency,
                 onSetCurrency = { onEvent(OnboardingEvent.SetBaseCurrency(it)) }
             )
         }
-
+        //3.1
         OnboardingState.ACCOUNTS -> {
             OnboardingAccounts(
                 baseCurrency = currency.code,

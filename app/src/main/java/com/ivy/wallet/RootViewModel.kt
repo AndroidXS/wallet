@@ -10,7 +10,7 @@ import com.ivy.base.legacy.stringRes
 import com.ivy.base.model.TransactionType
 import com.ivy.data.InMemoryDataStore
 import com.ivy.data.db.dao.read.SettingsDao
-import com.ivy.frp.test.TestIdlingResource
+import com.ivy.legacy.frp.test.TestIdlingResource
 import com.ivy.legacy.IvyWalletCtx
 import com.ivy.legacy.utils.ioThread
 import com.ivy.legacy.utils.readOnly
@@ -81,7 +81,7 @@ class RootViewModel @Inject constructor(
                 appLockEnabled = sharedPrefs.getBoolean(SharedPrefs.APP_LOCK_ENABLED, false)
                 // initial app locked state
                 _appLocked.value = appLockEnabled
-
+                //初始化完成
                 if (isOnboardingCompleted()) {
                     navigateOnboardedUser(intent)
                 } else {
@@ -100,6 +100,7 @@ class RootViewModel @Inject constructor(
     private fun navigateOnboardedUser(intent: Intent) {
         if (!handleSpecialStart(intent)) {
             nav.navigateTo(MainScreen)
+            //每天通知提醒
             transactionReminderLogic.scheduleReminder()
         }
     }
